@@ -1,5 +1,6 @@
 # kafka-stack
 
+## Basic
 Запуск кластера
 ```
 cd kafka
@@ -23,4 +24,21 @@ browse http://localhost:8000
 
 # показать свойства топика
 ./bin/kafka-topics.sh --zookeeper localhost:2181 -- topic my-topic --describe
+```
+
+## Python3
+Poetry
+```
+cd python3
+poetry shell
+poetry install
+```
+
+Simple
+```
+cd python3/simple
+cp .env-example .env
+python create_topic.py
+python producer.py
+python consumer.py
 ```
